@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>SaaSPro Settings</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "primary-container": "#a64fc4",
+                      "outline-variant": "#c1c6d5",
+                      "on-secondary-fixed-variant": "#6e1c91",
+                      "on-error-container": "#93000a",
+                      "on-tertiary-fixed-variant": "#454747",
+                      "secondary": "#893aab",
+                      "on-primary-container": "#fffbff",
+                      "error": "#ba1a1a",
+                      "inverse-primary": "#efb0ff",
+                      "outline": "#717785",
+                      "tertiary": "#5a5c5c",
+                      "primary-fixed-dim": "#efb0ff",
+                      "on-tertiary-fixed": "#1a1c1c",
+                      "surface-tint": "#8d36ab",
+                      "surface-container-highest": "#e0e2ec",
+                      "inverse-on-surface": "#eff0fa",
+                      "secondary-fixed-dim": "#ebb2ff",
+                      "surface-container": "#ecedf7",
+                      "surface-variant": "#e0e2ec",
+                      "surface-container-high": "#e6e8f1",
+                      "on-primary": "#ffffff",
+                      "tertiary-container": "#737575",
+                      "surface-bright": "#f9f9ff",
+                      "on-surface": "#181c22",
+                      "on-secondary-fixed": "#320047",
+                      "primary-fixed": "#fad7ff",
+                      "surface": "#f9f9ff",
+                      "on-error": "#ffffff",
+                      "secondary-fixed": "#f8d8ff",
+                      "surface-dim": "#d8dae3",
+                      "on-background": "#181c22",
+                      "inverse-surface": "#2d3038",
+                      "on-tertiary": "#ffffff",
+                      "on-tertiary-container": "#fcfcfc",
+                      "tertiary-fixed-dim": "#c6c6c7",
+                      "surface-container-low": "#f2f3fd",
+                      "on-secondary": "#ffffff",
+                      "on-primary-fixed-variant": "#721791",
+                      "background": "#f9f9ff",
+                      "surface-container-lowest": "#ffffff",
+                      "primary": "#8a33a9",
+                      "on-surface-variant": "#414753",
+                      "tertiary-fixed": "#e2e2e2",
+                      "on-secondary-container": "#640c87",
+                      "on-primary-fixed": "#330045",
+                      "error-container": "#ffdad6",
+                      "secondary-container": "#db87fd"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "fontFamily": {
+                      "headline": ["Inter"],
+                      "display": ["Inter"],
+                      "body": ["Inter"],
+                      "label": ["Inter"]
+              }
+            },
+          }
+        }
+      </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Inter', sans-serif; }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(166, 79, 196, 0.1);
+        }
+      </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background min-h-screen pb-24">
+<!-- TopAppBar -->
+<header class="w-full top-0 sticky z-50 bg-surface dark:bg-surface-dim flex items-center justify-between px-4 h-16 w-full">
+<div class="flex items-center gap-3">
+<button class="active:scale-95 duration-100 p-2 rounded-full hover:bg-surface-container-low transition-colors">
+<span class="material-symbols-outlined text-primary dark:text-primary-fixed-dim">arrow_back</span>
+</button>
+<h1 class="font-headline text-headline-sm font-semibold text-on-surface">Settings</h1>
+</div>
+<button class="active:scale-95 duration-100 p-2 rounded-full hover:bg-surface-container-low transition-colors">
+<span class="material-symbols-outlined text-on-surface-variant dark:text-outline-variant">more_vert</span>
+</button>
+</header>
+<main class="px-4 py-6 max-w-2xl mx-auto space-y-8">
+<!-- Profile Quick Card -->
+<section class="glass-card p-6 rounded-xl shadow-sm flex items-center gap-4">
+<div class="relative">
+<img alt="User" class="w-16 h-16 rounded-full border-2 border-primary-container" data-alt="A professional studio portrait of a confident executive smiling warmly at the camera. The background is a soft, blurred office interior with high-key lighting that emphasizes a clean and modern workspace. The subject has a polished appearance, reflecting the Royal Amethyst brand's commitment to professional excellence and premium quality. The lighting is diffused and even, creating a sense of reliability and trust in a light-mode interface." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBWIlhFDZHeCACnohmPFY0VL4rC8N5okvSH4xSmgLD4JWPQ9wTUP0CCeIb7MdhuS3_u7yi0zSYKrXwV2S47pTpQAaVo3quzgQrjlwuvUFIQwFctbOoaleNL6KCUi4jgOO34WO8Sr4BGnfqGv-3DdrHdGJ6v11r7LUAwuJ_S7PwnZ4a-NEJLq0CScpM2_g50qI1sszpCeEj4B7OB1ZZZKBuWoUYMXhanUbjqdg6fT5YoKz1_2wxK0LFu6uvRgWLd_Lwtunm-6QgsDho"/>
+<div class="absolute bottom-0 right-0 bg-primary w-5 h-5 rounded-full border-2 border-white flex items-center justify-center">
+<span class="material-symbols-outlined text-[12px] text-white" style="font-variation-settings: 'FILL' 1;">verified</span>
+</div>
+</div>
+<div>
+<h2 class="font-semibold text-lg text-on-surface">Alex Thompson</h2>
+<p class="text-sm text-on-surface-variant">Premium Plan • Pro User</p>
+</div>
+<button class="ml-auto text-primary font-medium text-sm hover:underline">Edit</button>
+</section>
+<!-- Account Group -->
+<div class="space-y-4">
+<h3 class="px-2 text-xs font-bold uppercase tracking-widest text-primary/70">Account</h3>
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm border border-outline-variant/20">
+<div class="flex items-center justify-between p-4 hover:bg-surface-container-low transition-colors cursor-pointer group">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary">person</span>
+</div>
+<div>
+<p class="font-medium text-on-surface">Profile Information</p>
+<p class="text-xs text-on-surface-variant">Name, photo, and job title</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline-variant group-hover:translate-x-1 transition-transform">chevron_right</span>
+</div>
+<div class="h-px bg-outline-variant/10 mx-4"></div>
+<div class="flex items-center justify-between p-4 hover:bg-surface-container-low transition-colors cursor-pointer group">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary">mail</span>
+</div>
+<div>
+<p class="font-medium text-on-surface">Email Address</p>
+<p class="text-xs text-on-surface-variant">alex.thompson@saaspro.com</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline-variant group-hover:translate-x-1 transition-transform">chevron_right</span>
+</div>
+</div>
+</div>
+<!-- App Group -->
+<div class="space-y-4">
+<h3 class="px-2 text-xs font-bold uppercase tracking-widest text-primary/70">App</h3>
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm border border-outline-variant/20">
+<div class="flex items-center justify-between p-4 hover:bg-surface-container-low transition-colors cursor-pointer group">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-lg bg-secondary/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-secondary">palette</span>
+</div>
+<p class="font-medium text-on-surface">Theme</p>
+</div>
+<div class="flex items-center gap-2 bg-surface-container p-1 rounded-full">
+<button class="w-8 h-8 rounded-full bg-white shadow-sm flex items-center justify-center">
+<span class="material-symbols-outlined text-sm text-primary" style="font-variation-settings: 'FILL' 1;">light_mode</span>
+</button>
+<button class="w-8 h-8 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-sm text-outline-variant">dark_mode</span>
+</button>
+</div>
+</div>
+<div class="h-px bg-outline-variant/10 mx-4"></div>
+<div class="flex items-center justify-between p-4 hover:bg-surface-container-low transition-colors cursor-pointer group">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-lg bg-secondary/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-secondary">language</span>
+</div>
+<p class="font-medium text-on-surface">Language</p>
+</div>
+<div class="flex items-center gap-1">
+<span class="text-sm text-on-surface-variant">English</span>
+<span class="material-symbols-outlined text-outline-variant group-hover:translate-x-1 transition-transform">chevron_right</span>
+</div>
+</div>
+<div class="h-px bg-outline-variant/10 mx-4"></div>
+<div class="flex items-center justify-between p-4 hover:bg-surface-container-low transition-colors cursor-pointer group">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-lg bg-secondary/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-secondary">notifications_active</span>
+</div>
+<p class="font-medium text-on-surface">Notifications</p>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-outline-variant/30 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+</div>
+</div>
+<!-- Privacy Group -->
+<div class="space-y-4">
+<h3 class="px-2 text-xs font-bold uppercase tracking-widest text-primary/70">Privacy &amp; Security</h3>
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm border border-outline-variant/20">
+<div class="flex items-center justify-between p-4 hover:bg-surface-container-low transition-colors cursor-pointer group">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-lg bg-on-secondary-fixed-variant/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-on-secondary-fixed-variant">lock</span>
+</div>
+<p class="font-medium text-on-surface">Change Password</p>
+</div>
+<span class="material-symbols-outlined text-outline-variant group-hover:translate-x-1 transition-transform">chevron_right</span>
+</div>
+<div class="h-px bg-outline-variant/10 mx-4"></div>
+<div class="flex items-center justify-between p-4 hover:bg-surface-container-low transition-colors cursor-pointer group">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-lg bg-on-secondary-fixed-variant/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-on-secondary-fixed-variant">security</span>
+</div>
+<p class="font-medium text-on-surface">Two-Factor Auth</p>
+</div>
+<span class="px-2 py-1 text-[10px] font-bold uppercase bg-error-container text-on-error-container rounded">Highly Recommended</span>
+<span class="material-symbols-outlined text-outline-variant group-hover:translate-x-1 transition-transform">chevron_right</span>
+</div>
+<div class="h-px bg-outline-variant/10 mx-4"></div>
+<div class="flex items-center justify-between p-4 hover:bg-surface-container-low transition-colors cursor-pointer group">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-lg bg-on-secondary-fixed-variant/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-on-secondary-fixed-variant">devices</span>
+</div>
+<p class="font-medium text-on-surface">Sessions</p>
+</div>
+<span class="material-symbols-outlined text-outline-variant group-hover:translate-x-1 transition-transform">chevron_right</span>
+</div>
+</div>
+</div>
+<!-- Support Group -->
+<div class="space-y-4">
+<h3 class="px-2 text-xs font-bold uppercase tracking-widest text-primary/70">Support</h3>
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm border border-outline-variant/20">
+<div class="flex items-center justify-between p-4 hover:bg-surface-container-low transition-colors cursor-pointer group">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-lg bg-tertiary-container/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-tertiary">help</span>
+</div>
+<p class="font-medium text-on-surface">Help Center</p>
+</div>
+<span class="material-symbols-outlined text-outline-variant group-hover:translate-x-1 transition-transform">open_in_new</span>
+</div>
+<div class="h-px bg-outline-variant/10 mx-4"></div>
+<div class="flex items-center justify-between p-4 hover:bg-surface-container-low transition-colors cursor-pointer group">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-lg bg-tertiary-container/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-tertiary">info</span>
+</div>
+<p class="font-medium text-on-surface">About SaaSPro</p>
+</div>
+<span class="text-xs text-on-surface-variant">v2.4.0</span>
+<span class="material-symbols-outlined text-outline-variant group-hover:translate-x-1 transition-transform">chevron_right</span>
+</div>
+</div>
+</div>
+<!-- Logout Button -->
+<button class="w-full mt-4 flex items-center justify-center gap-3 p-4 bg-error-container/20 text-error rounded-xl font-bold active:scale-[0.98] transition-transform border border-error/10">
+<span class="material-symbols-outlined">logout</span>
+            Logout
+        </button>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 w-full z-50 rounded-t-xl bg-surface-container dark:bg-surface-container-high shadow-[0_-2px_10px_rgba(0,0,0,0.05)]">
+<div class="flex justify-around items-center w-full px-2 py-3">
+<button class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline-variant px-5 py-1.5 hover:bg-surface-variant/50 transition-all active:scale-90 duration-200">
+<span class="material-symbols-outlined">home</span>
+<span class="font-label text-xs font-medium mt-1">Home</span>
+</button>
+<button class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline-variant px-5 py-1.5 hover:bg-surface-variant/50 transition-all active:scale-90 duration-200">
+<span class="material-symbols-outlined">analytics</span>
+<span class="font-label text-xs font-medium mt-1">Analytics</span>
+</button>
+<button class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline-variant px-5 py-1.5 hover:bg-surface-variant/50 transition-all active:scale-90 duration-200">
+<span class="material-symbols-outlined">group</span>
+<span class="font-label text-xs font-medium mt-1">Team</span>
+</button>
+<!-- Active State: Settings -->
+<button class="flex flex-col items-center justify-center bg-primary-container dark:bg-on-secondary-fixed-variant text-on-primary-container dark:text-on-primary rounded-xl px-5 py-1.5 transition-all active:scale-90 duration-200">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">settings</span>
+<span class="font-label text-xs font-medium mt-1">Settings</span>
+</button>
+</div>
+</nav>
+<script>
+        // Micro-interactions for toggle switches and generic hover effects
+        document.querySelectorAll('input[type="checkbox"]').forEach(toggle => {
+            toggle.addEventListener('change', function() {
+                const parent = this.closest('.bg-surface-container-lowest');
+                if (this.checked) {
+                    console.log('Setting enabled');
+                } else {
+                    console.log('Setting disabled');
+                }
+            });
+        });
+
+        // Theme switcher logic simulation
+        const themeBtn = document.querySelector('.bg-surface-container .bg-white');
+        if(themeBtn) {
+            themeBtn.addEventListener('click', () => {
+                document.documentElement.classList.toggle('dark');
+            });
+        }
+    </script>
+</body></html>

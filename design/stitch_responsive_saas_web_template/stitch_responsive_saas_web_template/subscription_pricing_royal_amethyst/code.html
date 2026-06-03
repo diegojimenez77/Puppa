@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Pricing &amp; Plans | SaaSPro</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "outline-variant": "#c1c6d5",
+                        "inverse-surface": "#2d3038",
+                        "tertiary-container": "#737575",
+                        "error-container": "#ffdad6",
+                        "tertiary": "#5a5c5c",
+                        "inverse-primary": "#efb0ff",
+                        "secondary-fixed": "#f8d8ff",
+                        "error": "#ba1a1a",
+                        "on-surface-variant": "#414753",
+                        "surface-container-highest": "#e0e2ec",
+                        "surface-container-lowest": "#ffffff",
+                        "on-secondary-container": "#640c87",
+                        "surface-container-high": "#e6e8f1",
+                        "on-primary": "#ffffff",
+                        "surface-container-low": "#f2f3fd",
+                        "background": "#f9f9ff",
+                        "surface-container": "#ecedf7",
+                        "on-tertiary-fixed-variant": "#454747",
+                        "tertiary-fixed": "#e2e2e2",
+                        "on-tertiary": "#ffffff",
+                        "on-background": "#181c22",
+                        "on-secondary": "#ffffff",
+                        "on-surface": "#181c22",
+                        "surface-bright": "#f9f9ff",
+                        "on-error": "#ffffff",
+                        "surface-variant": "#e0e2ec",
+                        "surface": "#f9f9ff",
+                        "inverse-on-surface": "#eff0fa",
+                        "surface-dim": "#d8dae3",
+                        "secondary-fixed-dim": "#ebb2ff",
+                        "secondary": "#893aab",
+                        "on-tertiary-fixed": "#1a1c1c",
+                        "tertiary-fixed-dim": "#c6c6c7",
+                        "primary-container": "#a64fc4",
+                        "on-tertiary-container": "#fcfcfc",
+                        "on-secondary-fixed-variant": "#6e1c91",
+                        "on-secondary-fixed": "#320047",
+                        "primary-fixed": "#fad7ff",
+                        "on-error-container": "#93000a",
+                        "surface-tint": "#8d36ab",
+                        "on-primary-fixed-variant": "#721791",
+                        "on-primary-container": "#fffbff",
+                        "secondary-container": "#db87fd",
+                        "primary": "#8a33a9",
+                        "on-primary-fixed": "#330045",
+                        "primary-fixed-dim": "#efb0ff",
+                        "outline": "#717785"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.5rem",
+                        "lg": "0.75rem",
+                        "xl": "1rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Inter", "sans-serif"],
+                        "display": ["Inter", "sans-serif"],
+                        "body": ["Inter", "sans-serif"],
+                        "label": ["Inter", "sans-serif"]
+                    },
+                    "spacing": {
+                        "xl": "40px",
+                        "xs": "4px",
+                        "margin-mobile": "16px",
+                        "container-max": "1280px",
+                        "gutter": "24px",
+                        "sm": "8px",
+                        "lg": "24px",
+                        "md": "16px",
+                        "base": "4px",
+                        "2xl": "64px"
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body { background-color: #f9f9ff; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .active-ring {
+            box-shadow: 0 0 0 2px #8a33a9;
+        }
+    </style>
+</head>
+<body class="font-body text-on-background">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-surface-container-lowest dark:bg-inverse-surface border-b border-outline-variant dark:border-outline shadow-sm h-16 flex items-center justify-between px-margin-mobile">
+<div class="flex items-center gap-md">
+<button class="material-symbols-outlined text-primary dark:text-primary-fixed hover:bg-surface-container-low transition-colors p-sm rounded-full active:scale-95 duration-150">menu</button>
+<span class="font-headline text-xl font-bold text-primary dark:text-primary-fixed tracking-tight">SaaSPro</span>
+</div>
+<div class="flex items-center gap-md">
+<nav class="hidden md:flex gap-lg">
+<a class="text-on-surface-variant hover:text-primary transition-colors font-medium text-sm px-sm py-xs" href="#">Dashboard</a>
+<a class="text-primary font-bold text-sm px-sm py-xs" href="#">Pricing</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-medium text-sm px-sm py-xs" href="#">Security</a>
+</nav>
+<button class="material-symbols-outlined text-primary dark:text-primary-fixed hover:bg-surface-container-low transition-colors p-sm rounded-full active:scale-95 duration-150">account_circle</button>
+</div>
+</header>
+<main class="pt-24 pb-2xl px-margin-mobile max-w-container-max mx-auto">
+<!-- Hero Section -->
+<section class="text-center mb-xl">
+<h1 class="font-headline text-4xl md:text-5xl font-bold mb-md text-on-surface tracking-tight">Scalable plans for every stage</h1>
+<p class="text-on-surface-variant text-lg max-w-2xl mx-auto leading-relaxed">Choose the perfect plan to accelerate your growth. From small startups to global enterprises, we've got you covered.</p>
+</section>
+<!-- Toggle Section -->
+<div class="flex justify-center items-center gap-md mb-xl">
+<span class="text-sm font-semibold text-on-surface-variant" id="label-monthly">Monthly</span>
+<button class="relative w-12 h-6 bg-surface-container-high rounded-full p-1 transition-colors duration-200" id="billing-toggle">
+<div class="w-4 h-4 bg-primary rounded-full transition-transform duration-200 transform translate-x-0" id="toggle-circle"></div>
+</button>
+<span class="text-sm font-semibold text-on-surface-variant flex items-center gap-xs" id="label-yearly">
+                Yearly <span class="bg-primary-fixed text-on-primary-fixed-variant px-sm py-0.5 rounded-full text-[10px] font-bold">Save 20%</span>
+</span>
+</div>
+<!-- Pricing Grid -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-lg mb-2xl">
+<!-- Basic Plan -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-lg flex flex-col hover:shadow-md transition-shadow">
+<div class="mb-lg">
+<span class="text-sm font-bold text-secondary mb-xs block uppercase tracking-wider">Basic</span>
+<div class="flex items-baseline gap-xs">
+<span class="text-3xl font-bold text-on-surface" data-price="monthly">$29</span>
+<span class="text-3xl font-bold text-on-surface hidden" data-price="yearly">$24</span>
+<span class="text-sm font-medium text-on-surface-variant">/mo</span>
+</div>
+<p class="mt-md text-sm text-on-surface-variant leading-relaxed">Essential features for small teams just starting out.</p>
+</div>
+<ul class="flex-grow flex flex-col gap-sm mb-lg">
+<li class="flex items-center gap-sm text-sm text-on-surface">
+<span class="material-symbols-outlined text-primary text-[18px]">check_circle</span>
+                        5 Team Members
+                    </li>
+<li class="flex items-center gap-sm text-sm text-on-surface">
+<span class="material-symbols-outlined text-primary text-[18px]">check_circle</span>
+                        10GB Shared Storage
+                    </li>
+<li class="flex items-center gap-sm text-sm text-on-surface">
+<span class="material-symbols-outlined text-primary text-[18px]">check_circle</span>
+                        Basic Analytics
+                    </li>
+<li class="flex items-center gap-sm text-sm text-on-surface-variant opacity-50">
+<span class="material-symbols-outlined text-[18px]">block</span>
+                        Advanced Security
+                    </li>
+</ul>
+<button class="w-full py-3 border-2 border-primary text-primary font-bold text-sm rounded-lg hover:bg-surface-container-low transition-colors active:scale-95">Get Started</button>
+</div>
+<!-- Pro Plan (Highlighted) -->
+<div class="relative bg-surface-container-lowest border-2 border-primary rounded-xl p-lg flex flex-col shadow-xl md:scale-105 z-10">
+<div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-primary text-on-primary px-lg py-1 rounded-full text-[12px] font-bold uppercase tracking-widest">Most Popular</div>
+<div class="mb-lg">
+<span class="text-sm font-bold text-primary mb-xs block uppercase tracking-wider">Pro</span>
+<div class="flex items-baseline gap-xs">
+<span class="text-3xl font-bold text-on-surface" data-price="monthly">$79</span>
+<span class="text-3xl font-bold text-on-surface hidden" data-price="yearly">$63</span>
+<span class="text-sm font-medium text-on-surface-variant">/mo</span>
+</div>
+<p class="mt-md text-sm text-on-surface-variant leading-relaxed">The professional choice for scaling business operations.</p>
+</div>
+<ul class="flex-grow flex flex-col gap-sm mb-lg">
+<li class="flex items-center gap-sm text-sm text-on-surface">
+<span class="material-symbols-outlined text-primary text-[18px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                        Unlimited Team Members
+                    </li>
+<li class="flex items-center gap-sm text-sm text-on-surface">
+<span class="material-symbols-outlined text-primary text-[18px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                        100GB Shared Storage
+                    </li>
+<li class="flex items-center gap-sm text-sm text-on-surface">
+<span class="material-symbols-outlined text-primary text-[18px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                        Advanced Data Visuals
+                    </li>
+<li class="flex items-center gap-sm text-sm text-on-surface">
+<span class="material-symbols-outlined text-primary text-[18px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                        Priority Email Support
+                    </li>
+</ul>
+<button class="w-full py-3 bg-primary text-on-primary font-bold text-sm rounded-lg hover:brightness-110 transition-all active:scale-95 shadow-md">Start Free Trial</button>
+</div>
+<!-- Enterprise Plan -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-lg flex flex-col hover:shadow-md transition-shadow">
+<div class="mb-lg">
+<span class="text-sm font-bold text-secondary mb-xs block uppercase tracking-wider">Enterprise</span>
+<div class="flex items-baseline gap-xs">
+<span class="text-3xl font-bold text-on-surface" data-price="monthly">$199</span>
+<span class="text-3xl font-bold text-on-surface hidden" data-price="yearly">$159</span>
+<span class="text-sm font-medium text-on-surface-variant">/mo</span>
+</div>
+<p class="mt-md text-sm text-on-surface-variant leading-relaxed">Custom infrastructure and dedicated white-glove support.</p>
+</div>
+<ul class="flex-grow flex flex-col gap-sm mb-lg">
+<li class="flex items-center gap-sm text-sm text-on-surface">
+<span class="material-symbols-outlined text-primary text-[18px]">check_circle</span>
+                        Unlimited Everything
+                    </li>
+<li class="flex items-center gap-sm text-sm text-on-surface">
+<span class="material-symbols-outlined text-primary text-[18px]">check_circle</span>
+                        Custom API Access
+                    </li>
+<li class="flex items-center gap-sm text-sm text-on-surface">
+<span class="material-symbols-outlined text-primary text-[18px]">check_circle</span>
+                        Dedicated Account Manager
+                    </li>
+<li class="flex items-center gap-sm text-sm text-on-surface">
+<span class="material-symbols-outlined text-primary text-[18px]">check_circle</span>
+                        SSO &amp; SAML Security
+                    </li>
+</ul>
+<button class="w-full py-3 border-2 border-primary text-primary font-bold text-sm rounded-lg hover:bg-surface-container-low transition-colors active:scale-95">Contact Sales</button>
+</div>
+</div>
+<!-- Checkout/Trust Area -->
+<section class="max-w-3xl mx-auto bg-surface-container-low rounded-2xl p-xl flex flex-col md:flex-row gap-xl items-center border border-outline-variant">
+<div class="flex-1 text-center md:text-left">
+<h3 class="font-headline text-2xl font-bold mb-sm text-on-surface">Secure Payment</h3>
+<p class="text-on-surface-variant text-sm mb-lg leading-relaxed">Processing handled via Stripe for maximum security. All major cards and payment methods accepted.</p>
+<div class="flex flex-wrap justify-center md:justify-start gap-md opacity-50 grayscale">
+<span class="material-symbols-outlined text-[32px]" title="Visa">credit_card</span>
+<span class="material-symbols-outlined text-[32px]" title="Mastercard">payments</span>
+<span class="material-symbols-outlined text-[32px]" title="Apple Pay">account_balance_wallet</span>
+<span class="material-symbols-outlined text-[32px]" title="Stripe">encrypted</span>
+</div>
+</div>
+<div class="w-full md:w-auto">
+<button class="w-full md:w-72 py-4 bg-inverse-surface text-surface-container-lowest flex items-center justify-center gap-md font-bold text-sm rounded-xl hover:opacity-90 transition-opacity">
+<span class="material-symbols-outlined">lock</span>
+                    Pay with Stripe
+                </button>
+<p class="text-center mt-sm text-[10px] uppercase tracking-widest text-on-surface-variant font-bold">256-bit AES Encryption</p>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container border-t border-outline-variant">
+<div class="max-w-container-max mx-auto px-margin-mobile py-xl flex flex-col md:flex-row justify-between items-center gap-md">
+<div class="flex flex-col items-center md:items-start">
+<span class="font-bold text-primary mb-xs">SaaSPro</span>
+<p class="text-on-surface-variant text-xs font-medium">© 2024 SaaSPro Inc. All rights reserved.</p>
+</div>
+<div class="flex gap-lg">
+<a class="text-on-surface-variant hover:text-primary transition-all text-xs font-semibold" href="#">Privacy Policy</a>
+<a class="text-on-surface-variant hover:text-primary transition-all text-xs font-semibold" href="#">Terms of Service</a>
+<a class="text-on-surface-variant hover:text-primary transition-all text-xs font-semibold" href="#">Cookies</a>
+<a class="text-on-surface-variant hover:text-primary transition-all text-xs font-semibold" href="#">Contact</a>
+</div>
+</div>
+</footer>
+<script>
+        const billingToggle = document.getElementById('billing-toggle');
+        const toggleCircle = document.getElementById('toggle-circle');
+        const monthlyPrices = document.querySelectorAll('[data-price="monthly"]');
+        const yearlyPrices = document.querySelectorAll('[data-price="yearly"]');
+        const labelMonthly = document.getElementById('label-monthly');
+        const labelYearly = document.getElementById('label-yearly');
+
+        let isYearly = false;
+
+        billingToggle.addEventListener('click', () => {
+            isYearly = !isYearly;
+            
+            if (isYearly) {
+                toggleCircle.style.transform = 'translateX(24px)';
+                billingToggle.classList.add('bg-primary');
+                toggleCircle.classList.replace('bg-primary', 'bg-on-primary');
+                monthlyPrices.forEach(p => p.classList.add('hidden'));
+                yearlyPrices.forEach(p => p.classList.remove('hidden'));
+                labelYearly.classList.add('text-primary');
+                labelMonthly.classList.remove('text-primary');
+            } else {
+                toggleCircle.style.transform = 'translateX(0)';
+                billingToggle.classList.remove('bg-primary');
+                toggleCircle.classList.replace('bg-on-primary', 'bg-primary');
+                monthlyPrices.forEach(p => p.classList.remove('hidden'));
+                yearlyPrices.forEach(p => p.classList.add('hidden'));
+                labelMonthly.classList.add('text-primary');
+                labelYearly.classList.remove('text-primary');
+            }
+        });
+
+        // Initialize state
+        labelMonthly.classList.add('text-primary');
+    </script>
+</body></html>
