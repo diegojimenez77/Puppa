@@ -1,5 +1,5 @@
 import type Stripe from 'stripe'
-import { stripe } from '@/lib/stripe/client'
+import { getStripe } from '@/lib/stripe/client'
 import {
   findPlanKeyByPriceId,
   formatCurrency,
@@ -77,7 +77,7 @@ async function fetchPaymentMethod(
   customerId: string,
 ): Promise<PaymentMethodInfo | null> {
   try {
-    const customer = await stripe.customers.retrieve(customerId)
+    const customer = await getStripe().customers.retrieve(customerId)
     if (customer.deleted) return null
 
     const defaultPm = customer.invoice_settings?.default_payment_method
@@ -85,7 +85,7 @@ async function fetchPaymentMethod(
       typeof defaultPm === 'string' ? defaultPm : defaultPm?.id ?? null
 
     if (pmId) {
-      const pm = await stripe.paymentMethods.retrieve(pmId)
+      const pm = await getStripe().paymentMethods.retrieve(pmId)
       if (pm.card) {
         return {
           brand: pm.card.brand,
@@ -96,7 +96,7 @@ async function fetchPaymentMethod(
       }
     }
 
-    const methods = await stripe.paymentMethods.list({
+    const methods = await getStripe().paymentMethods.list({
       customer: customerId,
       type: 'card',
       limit: 1,
@@ -161,7 +161,7 @@ export async function getBillingData(
     try {
       const [pm, invoiceList] = await Promise.all([
         fetchPaymentMethod(sub.stripe_customer_id),
-        stripe.invoices.list({
+        getStripe().invoices.list({
           customer: sub.stripe_customer_id,
           limit: 12,
         }),

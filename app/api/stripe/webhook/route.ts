@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import type Stripe from 'stripe'
-import { stripe } from '@/lib/stripe/client'
+import { getStripe } from '@/lib/stripe/client'
 import { PLANS } from '@/lib/stripe/plans'
 import { createServiceClient } from '@/lib/supabase/service'
 
@@ -18,7 +18,7 @@ function getPlanName(priceId: string): string {
 async function syncSubscription(subscription: Stripe.Subscription) {
   const db = createServiceClient()
 
-  const customer = await stripe.customers.retrieve(subscription.customer as string)
+  const customer = await getStripe().customers.retrieve(subscription.customer as string)
   if (customer.deleted) return
 
   const userId = (customer as Stripe.Customer).metadata?.supabase_user_id
@@ -55,7 +55,7 @@ export async function POST(request: NextRequest) {
 
   let event: Stripe.Event
   try {
-    event = stripe.webhooks.constructEvent(body, sig, process.env.STRIPE_WEBHOOK_SECRET!)
+    event = getStripe().webhooks.constructEvent(body, sig, process.env.STRIPE_WEBHOOK_SECRET!)
   } catch {
     return NextResponse.json({ error: 'Invalid signature' }, { status: 400 })
   }
@@ -65,7 +65,7 @@ export async function POST(request: NextRequest) {
       case 'checkout.session.completed': {
         const session = event.data.object as Stripe.Checkout.Session
         if (session.mode === 'subscription' && session.subscription) {
-          const subscription = await stripe.subscriptions.retrieve(session.subscription as string)
+          const subscription = await getStripe().subscriptions.retrieve(session.subscription as string)
           await syncSubscription(subscription)
         }
         break
@@ -81,7 +81,7 @@ export async function POST(request: NextRequest) {
         const subId = invoice.parent?.subscription_details?.subscription
         if (subId) {
           const subscriptionId = typeof subId === 'string' ? subId : subId.id
-          const subscription = await stripe.subscriptions.retrieve(subscriptionId)
+          const subscription = await getStripe().subscriptions.retrieve(subscriptionId)
           await syncSubscription(subscription)
         }
         break
